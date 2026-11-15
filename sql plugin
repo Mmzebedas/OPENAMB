@@ -1,0 +1,238 @@
+CREATE SCHEMA IF NOT EXISTS open_amb;
+SET search_path = open_amb, public;
+ 
+-- ---------------------------------------------------------------- tablas editables ---
+ 
+CREATE TABLE IF NOT EXISTS category (
+    category_id  integer     GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    code         text        NOT NULL UNIQUE,          -- identificador estable, p. ej. '01-cartografia'
+    name_ca      text        NOT NULL,
+    name_en      text        NOT NULL,
+    name_es      text        NOT NULL,
+    sort_order   integer     NOT NULL DEFAULT 0,
+    active       boolean     NOT NULL DEFAULT true     -- false = no se publica
+);
+ 
+CREATE TABLE IF NOT EXISTS product (
+    product_id   integer     GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    code         text        NOT NULL UNIQUE,          -- identificador estable, p. ej. '1-mapa-topografic-...'
+    geoportal_id text,                                 -- id del producto en la configuración del Geoportal
+    category_id  integer     NOT NULL REFERENCES category (category_id),
+    name_ca      text        NOT NULL,
+    name_en      text        NOT NULL,
+    name_es      text        NOT NULL,
+    attribution  text        NOT NULL DEFAULT '',      -- p. ej. '© AMB, © ICGC'
+    status       text        NOT NULL DEFAULT 'pending'
+                 CHECK (status IN ('verified', 'candidate', 'pending')),
+    verified_by  text,                                 -- quién lo ha comprobado
+    verified_on  date,                                 -- cuándo
+    sort_order   integer     NOT NULL DEFAULT 0,
+    active       boolean     NOT NULL DEFAULT true
+);
+ 
+-- Al marcar un producto como 'verified' se anota solo quién (usuario de la base de datos) y cuándo,
+-- si no se ha indicado. No se exige nada: es un registro, no una barrera.
+CREATE OR REPLACE FUNCTION fill_verification() RETURNS trigger
+LANGUAGE plpgsql AS $$
+BEGIN
+    IF NEW.status = 'verified' THEN
+        NEW.verified_by := COALESCE(NEW.verified_by, current_user);
+        NEW.verified_on := COALESCE(NEW.verified_on, current_date);
+    END IF;
+    RETURN NEW;
+END $$;
+DROP TRIGGER IF EXISTS product_fill_verification ON product;
+CREATE TRIGGER product_fill_verification BEFORE INSERT OR UPDATE ON product
+    FOR EACH ROW EXECUTE FUNCTION fill_verification();
+CREATE INDEX IF NOT EXISTS product_category_idx ON product (category_id);
+ 
+-- Geoservicios de un producto. scope='product' = el mapa; scope='sheet_index' = su tall de fulls.
+-- Varias filas con el mismo scope = fuentes alternativas, que el plugin prueba por orden (sort_order).
+CREATE TABLE IF NOT EXISTS source (
+    source_id        integer  GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    product_id       integer  NOT NULL REFERENCES product (product_id) ON DELETE CASCADE,
+    scope            text     NOT NULL DEFAULT 'product' CHECK (scope IN ('product', 'sheet_index')),
+    sort_order       integer  NOT NULL DEFAULT 0,
+    type             text     NOT NULL CHECK (type IN ('arcgis', 'wmts', 'wms')),
+    -- arcgis: URL del MapServer | wmts: URL de WMTSCapabilities.xml | wms: URL del endpoint WMS
+    url              text     NOT NULL,
+    crs              text,                               -- p. ej. 'EPSG:25831' (wmts y wms)
+    layer            text,                               -- wmts: nombre de la capa
+    tile_matrix_set  text,                               -- wmts
+    style            text,                               -- wmts (por defecto 'default')
+    format           text,                               -- p. ej. 'image/png'
+    wms_layers       text[],                             -- wms: lista de subcapas
+    tile_template    text,
+    preflight_tile   jsonb,                              -- wmts: datos de la tesela de comprobación
+    label_key        text,                               -- clave de texto del plugin (p. ej. 'src_arcgis')
+    note_key         text,
+    license          text,                               -- solo si el propio servicio la declara
+    CONSTRAINT source_unique_order UNIQUE (product_id, scope, sort_order)
+);
+ 
+-- Enlaces a documentos: especificaciones y leyendas (por idioma) y disponibilidad (sin idioma).
+CREATE TABLE IF NOT EXISTS document (
+    document_id  integer  GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    product_id   integer  NOT NULL REFERENCES product (product_id) ON DELETE CASCADE,
+    kind         text     NOT NULL CHECK (kind IN ('specs', 'legend', 'availability')),
+    language     text     NOT NULL DEFAULT 'all' CHECK (language IN ('ca', 'en', 'es', 'all')),
+    url          text     NOT NULL,
+    CONSTRAINT document_unique UNIQUE (product_id, kind, language)
+);
+ 
+-- ------------------------------------------------- control de versiones del catálogo ---
+-- Una sola fila. Cada cambio en cualquier tabla incrementa 'revision': el plugin la usa para saber
+-- si hay un catálogo más nuevo sin comparar todo el contenido.
+CREATE TABLE IF NOT EXISTS catalog_meta (
+    id          integer     PRIMARY KEY CHECK (id = 1),
+    revision    bigint      NOT NULL DEFAULT 1,
+    updated_at  timestamptz NOT NULL DEFAULT now()
+);
+INSERT INTO catalog_meta (id) VALUES (1) ON CONFLICT (id) DO NOTHING;
+ 
+CREATE OR REPLACE FUNCTION bump_catalog_revision() RETURNS trigger
+LANGUAGE plpgsql AS $$
+BEGIN
+    UPDATE open_amb.catalog_meta SET revision = revision + 1, updated_at = now() WHERE id = 1;
+    RETURN NULL;
+END $$;
+ 
+DO $$
+DECLARE t text;
+BEGIN
+    FOREACH t IN ARRAY ARRAY['category', 'product', 'source', 'document'] LOOP
+        EXECUTE format('DROP TRIGGER IF EXISTS %I ON open_amb.%I', t || '_bump_revision', t);
+        EXECUTE format('CREATE TRIGGER %I AFTER INSERT OR UPDATE OR DELETE ON open_amb.%I
+                        FOR EACH STATEMENT EXECUTE FUNCTION open_amb.bump_catalog_revision()',
+                       t || '_bump_revision', t);
+    END LOOP;
+END $$;
+ 
+-- --------------------------------------------------------------- vista del catálogo JSON ---
+ 
+-- Una fuente es publicable si el plugin podría cargarla: URL https y los campos que exige su tipo.
+CREATE OR REPLACE VIEW v_source_check AS
+SELECT s.*,
+       CASE
+           WHEN s.url !~ '^https://[^[:space:]]+$' THEN 'url is not an https:// address'
+           WHEN s.tile_template IS NOT NULL AND s.tile_template !~ '^https://[^[:space:]]+$' THEN 'tile_template is not https'
+           WHEN s.type = 'wmts' AND (s.layer IS NULL OR s.tile_matrix_set IS NULL OR s.crs IS NULL)
+                THEN 'wmts needs layer, tile_matrix_set and crs'
+           WHEN s.type = 'wms' AND (s.wms_layers IS NULL OR cardinality(s.wms_layers) = 0 OR s.crs IS NULL OR s.format IS NULL)
+                THEN 'wms needs wms_layers, crs and format'
+           ELSE NULL
+       END AS problem
+FROM source s;
+ 
+-- Una fuente como objeto JSON, con los nombres de clave que espera el plugin (solo las publicables).
+CREATE OR REPLACE VIEW v_source_json AS
+SELECT s.product_id, s.scope, s.sort_order,
+       jsonb_strip_nulls(jsonb_build_object(
+           'type', s.type,
+           CASE WHEN s.type = 'wmts' THEN 'capabilities_url' ELSE 'url' END, s.url,
+           'crs', s.crs, 'layer', s.layer, 'tile_matrix_set', s.tile_matrix_set,
+           'style', s.style, 'format', s.format,
+           'layers', to_jsonb(s.wms_layers),
+           'tile_template', s.tile_template, 'preflight_tile', s.preflight_tile,
+           'label_key', s.label_key, 'note_key', s.note_key, 'license', s.license
+       )) AS source
+FROM v_source_check s
+WHERE s.problem IS NULL;
+ 
+-- Solo se publican los enlaces a documentos que son https.
+CREATE OR REPLACE VIEW v_document_ok AS
+SELECT d.* FROM document d WHERE d.url ~ '^https://[^[:space:]]+$';
+ 
+-- Un producto publicable: activo, categoría activa, estado 'verified', nombres en los 3 idiomas y al
+-- menos una fuente publicable del mapa.
+CREATE OR REPLACE VIEW v_product_json AS
+SELECT p.category_id, p.sort_order, p.product_id,
+       jsonb_strip_nulls(jsonb_build_object(
+           'id', p.code,
+           'geoportal_id', p.geoportal_id,
+           'name', jsonb_build_object('ca', p.name_ca, 'en', p.name_en, 'es', p.name_es),
+           'attribution', p.attribution,
+           'specs',   COALESCE((SELECT jsonb_object_agg(d.language, d.url) FROM v_document_ok d
+                                 WHERE d.product_id = p.product_id AND d.kind = 'specs' AND d.language <> 'all'), '{}'::jsonb),
+           'legends', COALESCE((SELECT jsonb_object_agg(d.language, d.url) FROM v_document_ok d
+                                 WHERE d.product_id = p.product_id AND d.kind = 'legend' AND d.language <> 'all'), '{}'::jsonb),
+           'availability', COALESCE((SELECT d.url FROM v_document_ok d
+                                      WHERE d.product_id = p.product_id AND d.kind = 'availability' LIMIT 1), ''),
+           'status', p.status,
+           'verified_by', p.verified_by,
+           'sources', (SELECT jsonb_agg(v.source ORDER BY v.sort_order) FROM v_source_json v
+                        WHERE v.product_id = p.product_id AND v.scope = 'product'),
+           'sheets', (SELECT jsonb_build_object('verified_by', p.verified_by,
+                                                'sources', jsonb_agg(v.source ORDER BY v.sort_order))
+                        FROM v_source_json v
+                       WHERE v.product_id = p.product_id AND v.scope = 'sheet_index'
+                      HAVING count(*) > 0)
+       )) AS product
+FROM product p
+JOIN category c ON c.category_id = p.category_id AND c.active
+WHERE p.active
+  AND p.status = 'verified'
+  AND btrim(p.name_ca) <> '' AND btrim(p.name_en) <> '' AND btrim(p.name_es) <> ''
+  AND EXISTS (SELECT 1 FROM v_source_json v WHERE v.product_id = p.product_id AND v.scope = 'product');
+ 
+-- El catálogo completo: UNA fila con UN documento jsonb.
+CREATE OR REPLACE VIEW v_catalog_json AS
+SELECT jsonb_build_object(
+           'schema', 3,
+           'revision', m.revision,
+           'updated_at', to_char(m.updated_at AT TIME ZONE 'UTC', 'YYYY-MM-DD"T"HH24:MI:SS"Z"'),
+           'categories', COALESCE((
+               SELECT jsonb_agg(jsonb_build_object(
+                          'id', c.code,
+                          'name', jsonb_build_object('ca', c.name_ca, 'en', c.name_en, 'es', c.name_es),
+                          'products', pj.products)
+                      ORDER BY c.sort_order, c.category_id)
+                 FROM category c
+                 CROSS JOIN LATERAL (
+                       SELECT jsonb_agg(v.product ORDER BY v.sort_order, v.product_id) AS products
+                         FROM v_product_json v WHERE v.category_id = c.category_id) pj
+                WHERE c.active AND pj.products IS NOT NULL
+                  AND btrim(c.name_ca) <> '' AND btrim(c.name_en) <> '' AND btrim(c.name_es) <> ''), '[]'::jsonb)
+       ) AS catalog
+FROM catalog_meta m;
+ 
+-- AVISOS (no bloquean nada): qué filas NO se están publicando y por qué. Vacía = todo se publica.
+CREATE OR REPLACE VIEW v_catalog_problems AS
+SELECT p.code AS item, 'product is verified but has no publishable map source (see source warnings)' AS problem
+  FROM product p
+ WHERE p.active AND p.status = 'verified'
+   AND NOT EXISTS (SELECT 1 FROM v_source_json v WHERE v.product_id = p.product_id AND v.scope = 'product')
+UNION ALL
+SELECT p.code, 'source #' || s.source_id || ' (' || s.scope || ', ' || s.type || ') not published: ' || s.problem
+  FROM v_source_check s JOIN product p USING (product_id)
+ WHERE s.problem IS NOT NULL AND p.active
+UNION ALL
+SELECT p.code, 'document #' || d.document_id || ' (' || d.kind || '/' || d.language || ') not published: url is not https'
+  FROM document d JOIN product p USING (product_id)
+ WHERE d.url !~ '^https://[^[:space:]]+$' AND p.active
+UNION ALL
+SELECT p.code, 'product not published: a name (ca/en/es) is blank'
+  FROM product p
+ WHERE p.active AND p.status = 'verified'
+   AND (btrim(p.name_ca) = '' OR btrim(p.name_en) = '' OR btrim(p.name_es) = '')
+UNION ALL
+SELECT p.code, 'product not published: its category is inactive'
+  FROM product p JOIN category c USING (category_id)
+ WHERE p.active AND p.status = 'verified' AND NOT c.active
+UNION ALL
+SELECT c.code, 'category not published: a name (ca/en/es) is blank'
+  FROM category c
+ WHERE c.active AND (btrim(c.name_ca) = '' OR btrim(c.name_en) = '' OR btrim(c.name_es) = '');
+ 
+-- -------------------------------------------------------------- acceso de solo lectura ---
+-- El rol no puede hacer login: se le da a quien lo necesite (GRANT open_amb_reader TO usuario_fme;)
+DO $$
+BEGIN
+    IF NOT EXISTS (SELECT FROM pg_roles WHERE rolname = 'open_amb_reader') THEN
+        CREATE ROLE open_amb_reader NOLOGIN;
+    END IF;
+END $$;
+GRANT USAGE ON SCHEMA open_amb TO open_amb_reader;
+-- Solo la vista final (las tablas y las vistas intermedias no son legibles con este rol).
+GRANT SELECT ON open_amb.v_catalog_json TO open_amb_reader;
+GRANT SELECT ON open_amb.v_catalog_problems TO open_amb_reader;

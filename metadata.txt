@@ -1,0 +1,18 @@
+[general]
+name=Open AMB
+qgisMinimumVersion=3.28
+description=Browse the cartographic catalogue of the Barcelona Metropolitan Area (AMB) and load its products from the official geoservices.
+about=Open AMB adds a toolbar to QGIS to explore the catalogue of the AMB Cartography Geoportal (13 categories) and load products from the official AMB web services (WMTS/WMS). Requirements and restrictions: an Internet connection is needed; coverage is limited to the Barcelona Metropolitan Area (AMB); no external dependencies and no user account required. Products: the 60 products of the Geoportal are in a drop-down menu by category (like Open ICGC), each with its sheet index (tall de fulls) as a separate entry underneath; they were verified by the project team. Each product shows its specification, legend and availability links in the catalogue window. The interface is available in English, Catalan and Spanish (it follows the QGIS language and can be changed in the Help dialog). The logo is a graphic proposal of the project, not an official institutional logo of the AMB. Map data: (c) Àrea Metropolitana de Barcelona; attribution as declared for each product.
+version=1.1.0
+author=Open AMB project (authorship pending confirmation)
+email=
+homepage=https://github.com/Mmzebedas/OPENAMB#readme
+repository=https://github.com/Mmzebedas/OPENAMB
+tracker=https://github.com/Mmzebedas/OPENAMB/issues
+category=Web
+icon=icons/icon_1_logo.png
+experimental=True
+deprecated=False
+hasProcessingProvider=no
+tags=amb,barcelona,cartography,wms,wmts,geoservices,catalonia
+changelog=1.1.0 Drop-down menu by category with the sheet index under each product; the 3 marine products now use the public service; downloads section removed. 1.0.0 All products verified by the project team. 0.2.0 Trilingual interface (en/ca/es), new logos. 0.1.0 First version.

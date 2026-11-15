@@ -1,0 +1,2701 @@
+{
+ "schema": 2,
+ "categories": [
+  {
+   "id": "Cartografia-cartografia",
+   "name": {
+    "ca": "Cartografia",
+    "en": "Cartography",
+    "es": "Cartografía"
+   },
+   "products": [
+    {
+     "id": "1-mapa-topografic-metropolita-1-1-000",
+     "geoportal_id": "1",
+     "name": {
+      "ca": "Mapa topogràfic metropolità 1:1.000",
+      "en": "1:1,000 metropolitan topographic map",
+      "es": "Mapa topográfico metropolitano 1:1.000"
+     },
+     "attribution": "© AMB, © ICGC",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_MTM1000_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_MTM1000_Especificacions_en.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_MTM1000_Especificacions_es.pdf"
+     },
+     "legends": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_MTM_1000_Llegenda_ca.jpg",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_MTM_1000_Llegenda_en.jpg",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_MTM_1000_Llegenda_es.jpg"
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_MTM_1000_disponibilitat.pdf",
+     "status": "verified",
+     "sources": [
+      {
+       "type": "wmts",
+       "capabilities_url": "https://ide.amb.cat/geoserveis/rest/services/topografia_1000_25831/MapServer/WMTS/1.0.0/WMTSCapabilities.xml",
+       "layer": "topografia_1000_25831",
+       "tile_matrix_set": "default028mm",
+       "style": "default",
+       "format": "image/png",
+       "crs": "EPSG:25831",
+       "tile_template": "https://ide.amb.cat/geoserveis/rest/services/topografia_1000_25831/MapServer/WMTS/tile/1.0.0/topografia_1000_25831/default/default028mm/{z}/{row}/{col}.png",
+       "preflight_tile": {
+        "z": 6,
+        "origin": [
+         258000.0,
+         4766600.0
+        ],
+        "resolution": 0.5291677250021167,
+        "tile_size": 256
+       },
+       "label_key": "src_wmts",
+       "note_key": "note_wmts"
+      },
+      {
+       "type": "wms",
+       "url": "https://ide.amb.cat/geoserveis/services/topografia_1000/MapServer/WMSServer",
+       "layers": [
+        "18",
+        "19",
+        "20",
+        "1",
+        "2",
+        "3",
+        "5",
+        "9",
+        "10",
+        "11",
+        "12",
+        "7",
+        "14",
+        "15",
+        "16",
+        "22",
+        "23",
+        "24",
+        "26",
+        "28",
+        "29"
+       ],
+       "crs": "EPSG:25831",
+       "format": "image/png",
+       "label_key": "src_wms",
+       "note_key": "note_wms",
+       "license": "CC-BY 4.0"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/topografia_1000_index/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "CartografiaHistorica-cartografia-historica",
+   "name": {
+    "ca": "Cartografia històrica",
+    "en": "Historic cartography",
+    "es": "Cartografía histórica"
+   },
+   "products": [
+    {
+     "id": "50-topografic-metropolita-1-500-analogic",
+     "geoportal_id": "50",
+     "name": {
+      "ca": "Topogràfic metropolità 1:500 analògic",
+      "en": "Analogue 1:500 metropolitan topographic",
+      "es": "Topográfico metropolitano 1:500 analògico"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Topo_5c_1983_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Topo_5c_1983_Especificacions_ca.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Topo_5c_1983_Especificacions_ca.pdf"
+     },
+     "legends": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_MTM_500_Analogic_Llegenda_ca.jpg",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_MTM_500_Analogic_Llegenda_en.jpg",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_MTM_500_Analogic_Llegenda_es.jpg"
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_Topo_5c_1983_disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/topografia_500_analogic_hibrid_1980_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/topografia_500_analogic_index_1980/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "2-topografic-metropolita-1-2-000-digital",
+     "geoportal_id": "2",
+     "name": {
+      "ca": "Topogràfic metropolità 1:2.000 digital",
+      "en": "Digital 1:2,000 metropolitan topographic",
+      "es": "Topográfico metropolitano 1:2.000 digital"
+     },
+     "attribution": "© AMB, © ICGC",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_MTM2000_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_MTM2000_Especificacions_en.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_MTM2000_Especificacions_es.pdf"
+     },
+     "legends": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_MTM_2000_Llegenda_ca.jpg",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_MTM_2000_Llegenda_en.jpg",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_MTM_2000_Llegenda_es.jpg"
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_MTM_2000_disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/topografia_2000_1986_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/topografia_2000_digital_index_1986/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "49-topografic-metropolita-1-2-000-analogic",
+     "geoportal_id": "49",
+     "name": {
+      "ca": "Topogràfic metropolità 1:2.000 analògic",
+      "en": "Analogue 1:2,000 metropolitan topographic",
+      "es": "Topográfico metropolitano 1:2.000 analógico"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Topo_2M_1986_2000_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Topo_2M_1986_2000_Especificacions_ca.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Topo_2M_1986_2000_Especificacions_ca.pdf"
+     },
+     "legends": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_MTM_2000_Analogic_Llegenda_ca.jpg",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_MTM_2000_Analogic_Llegenda_en.jpg",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_MTM_2000_Analogic_Llegenda_es.jpg"
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_MTM_2000_Analogic_1986-2000_Disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/topografia_2000_analogic_hibrid_1986_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/topografia_2000_analogic_index_1986/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "52-topografic-metropolita-1-5-000-analogic",
+     "geoportal_id": "52",
+     "name": {
+      "ca": "Topogràfic metropolità 1:5.000 analògic",
+      "en": "Analogue 1:5,000 metropolitan topographic",
+      "es": "Topográfico metropolitano 1:5.000 analógico"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_MTM50001977Analogic_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_MTM50001977Analogic_Especificacions_ca.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_MTM50001977Analogic_Especificacions_ca.pdf"
+     },
+     "legends": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_MTM50001977Analogic_Llegenda_ca.jpg",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_MTM50001977Analogic_Llegenda_en.jpg",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_MTM50001977Analogic_Llegenda_es.jpg"
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_MTM50001977Analogic_Disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/topografia_5000_analogic_hibrid_1977_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/topografia_5000_analogic_index_1977/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "51-topografic-metropolita-1-10-000-analogic",
+     "geoportal_id": "51",
+     "name": {
+      "ca": "Topogràfic metropolità 1:10.000 analògic",
+      "en": "Analogue 1:10,000 metropolitan topographic",
+      "es": "Topográfico metropolitano 1:10.000 analógico"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_MTM100001970Analogic_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_MTM100001970Analogic_Especificacions_ca.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_MTM100001970Analogic_Especificacions_ca.pdf"
+     },
+     "legends": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_MTM100001970Analogic_Llegenda_ca.jpg",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_MTM100001970Analogic_Llegenda_en.jpg",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_MTM100001970Analogic_Llegenda_es.jpg"
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_MTM100001970Analogic_Disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/topografia_10000_analogic_hibrid_1970_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/topografia_10000_analogic_index_1970/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "CartografiaMarina-cartografia-marina",
+   "name": {
+    "ca": "Cartografia marina",
+    "en": "Marine cartography",
+    "es": "Cartografía marina"
+   },
+   "products": [
+    {
+     "id": "62-model-d-elevacions-topobatimetric",
+     "geoportal_id": "62",
+     "name": {
+      "ca": "Model d'elevacions topobatimètric",
+      "en": "Topobathymetric elevation model",
+      "es": "Modelo de elevaciones topobatimétrico"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_ModelElevacionsTopobatimetric_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_ModelElevacionsTopobatimetric_Especificacions_ca.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_ModelElevacionsTopobatimetric_Especificacions_ca.pdf"
+     },
+     "legends": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/topobatimetriaElevacions_Llegenda_ca.jpg",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/topobatimetriaElevacions_Llegenda_en.jpg",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/topobatimetriaElevacions_Llegenda_es.jpg"
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_TopobatimetriaElevacions_disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/elevacions_franja_litoral_metropolitana_hibrid_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/elevacions_franja_litoral_metropolitana_index/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "61-cartografia-topobatimetrica",
+     "geoportal_id": "61",
+     "name": {
+      "ca": "Cartografia topobatimètrica",
+      "en": "Topobathymetric cartography",
+      "es": "Cartografía topobatimétrica"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_CartografiaTopobatimetrica_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_CartografiaTopobatimetrica_Especificacions_ca.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_CartografiaTopobatimetrica_Especificacions_ca.pdf"
+     },
+     "legends": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/cartografiaTopobatimetrica_Llegenda_ca.jpg",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/cartografiaTopobatimetrica_Llegenda_en.jpg",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/cartografiaTopobatimetrica_Llegenda_es.jpg"
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_CartografiaTopobatimetrica_disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/batimetria_metropolitana_hibrid_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/batimetria_metropolitana_index/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "60-batimetria-multifeix",
+     "geoportal_id": "60",
+     "name": {
+      "ca": "Batimetria multifeix",
+      "en": "Multibeam bathymetry",
+      "es": "Batimetría multihaz"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_BatimetriaMultifeix_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_BatimetriaMultifeix_Especificacions_ca.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_BatimetriaMultifeix_Especificacions_ca.pdf"
+     },
+     "legends": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/batimetriaMultifeix_Llegenda_ca.jpg",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/batimetriaMultifeix_Llegenda_en.jpg",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/batimetriaMultifeix_Llegenda_es.jpg"
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_BatimetriaMultifeix_disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/nuvol_punts_batimetria_metropolitana_hibrid_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/nuvol_punts_batimetria_metropolitana_index/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "Ortofotos-ortofotos",
+   "name": {
+    "ca": "Ortofotos",
+    "en": "Orthophotos",
+    "es": "Ortofotos"
+   },
+   "products": [
+    {
+     "id": "73-ortofoto-sant-cugat-2024",
+     "geoportal_id": "73",
+     "name": {
+      "ca": "Ortofoto Sant Cugat 2024",
+      "en": "2024 orthophoto Sant Cugat",
+      "es": "Ortofoto Sant Cugat 2024"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Orto2024StCugat_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Orto2024StCugat_Especificacions_ca.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Orto2024StCugat_Especificacions_ca.pdf"
+     },
+     "legends": {
+      "ca": "",
+      "en": "",
+      "es": ""
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/OrtoSantCugat_2024_disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/ortofoto_local_SantCugat_10cm_2024_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/ortofoto_local_SantCugat_10cm_index_2024/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "72-ortofoto-2022",
+     "geoportal_id": "72",
+     "name": {
+      "ca": "Ortofoto 2022",
+      "en": "2022 orthophoto",
+      "es": "Ortofoto 2022"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Orto2022_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Orto2022_Especificacions_ca.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Orto2022_Especificacions_ca.pdf"
+     },
+     "legends": {
+      "ca": "",
+      "en": "",
+      "es": ""
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/Ortofoto_territorial_10cm_2022_disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/ortofoto_territorial_10cm_2022_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/ortofoto_local_10cm_index_2022/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "71-ortofoto-2020",
+     "geoportal_id": "71",
+     "name": {
+      "ca": "Ortofoto 2020",
+      "en": "2020 orthophoto",
+      "es": "Ortofoto 2020"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Orto2020_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Orto2020_Especificacions_ca.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Orto2020_Especificacions_ca.pdf"
+     },
+     "legends": {
+      "ca": "",
+      "en": "",
+      "es": ""
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_Orto_2020_disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/ortofoto_territorial_10cm_2020_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/ortofoto_local_10cm_index_2020/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "4-ortofoto-1992",
+     "geoportal_id": "4",
+     "name": {
+      "ca": "Ortofoto 1992",
+      "en": "1992 orthophoto",
+      "es": "Ortofoto 1992"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Orto1992_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Orto1992_Especificacions_en.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Orto1992_Especificacions_es.pdf"
+     },
+     "legends": {
+      "ca": "",
+      "en": "",
+      "es": ""
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_Orto_1992_Disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/AMB_Orto_1992_5M_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/ortofoto_local_50cm_index_1992/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "24-ortofoto-1981",
+     "geoportal_id": "24",
+     "name": {
+      "ca": "Ortofoto 1981",
+      "en": "1981 orthophoto",
+      "es": "Ortofoto 1981"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Orto1981_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Orto1981_Especificacions_en.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Orto1981_Especificacions_es.pdf"
+     },
+     "legends": {
+      "ca": "",
+      "en": "",
+      "es": ""
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_Orto_1981_Disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/AMB_Orto_1981_5M_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/ortofoto_local_50cm_index_1981/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "47-ortofoto-1977",
+     "geoportal_id": "47",
+     "name": {
+      "ca": "Ortofoto 1977",
+      "en": "1977 orthophoto",
+      "es": "Ortofoto 1977"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Orto1977_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Orto1977_Especificacions_ca.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Orto1977_Especificacions_ca.pdf"
+     },
+     "legends": {
+      "ca": "",
+      "en": "",
+      "es": ""
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_Orto_1977_Disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/ortofoto_local_25cm_1977_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/ortofoto_local_25cm_index_1977/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "25-ortofoto-1974",
+     "geoportal_id": "25",
+     "name": {
+      "ca": "Ortofoto 1974",
+      "en": "1974 orthophoto",
+      "es": "Ortofoto 1974"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Orto1974_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Orto1974_Especificacions_en.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Orto1974_Especificacions_es.pdf"
+     },
+     "legends": {
+      "ca": "",
+      "en": "",
+      "es": ""
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_Orto_1974_Disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/AMB_Orto_1974_5M_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/ortofoto_local_20cm_index_1974/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "5-ortofoto-1965",
+     "geoportal_id": "5",
+     "name": {
+      "ca": "Ortofoto 1965",
+      "en": "1965 orthophoto",
+      "es": "Ortofoto 1965"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Orto1965_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Orto1965_Especificacions_en.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Orto1965_Especificacions_es.pdf"
+     },
+     "legends": {
+      "ca": "",
+      "en": "",
+      "es": ""
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_Orto_1965_disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/Orto1965_ETRS89/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/ortofoto_local_75cm_index_1965/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "19-ortofoto-1956-57",
+     "geoportal_id": "19",
+     "name": {
+      "ca": "Ortofoto 1956-57",
+      "en": "1956-57 orthophoto",
+      "es": "Ortofoto 1956-57"
+     },
+     "attribution": "",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Orto1956_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Orto1956_Especificacions_en.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Orto1956_Especificacions_es.pdf"
+     },
+     "legends": {
+      "ca": "",
+      "en": "",
+      "es": ""
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_Orto_1956_disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/Orto1956_ETRS89/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/ortofoto_local_1m_index_1956/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "Ortofoto_Platges-ortofotos-de-platges-metropolitanes",
+   "name": {
+    "ca": "Ortofotos de platges metropolitanes",
+    "en": "Metropolitan coastal orthophotos",
+    "es": "Ortofotos de playas metropolitanes"
+   },
+   "products": [
+    {
+     "id": "83-ortofoto-de-platges-2025",
+     "geoportal_id": "83",
+     "name": {
+      "ca": "Ortofoto de platges 2025",
+      "en": "2025 coastal orthophoto",
+      "es": "Ortofoto de playas 2025"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_OrtoPlatges2025_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_OrtoPlatges2025_Especificacions_ca.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_OrtoPlatges2025_Especificacions_ca.pdf"
+     },
+     "legends": {
+      "ca": "",
+      "en": "",
+      "es": ""
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_OrtoPlatges_2025_disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/ortofoto_platges_5cm_hibrid_2025_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/ortofoto_platges_5cm_index_2025/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "82-ortofoto-de-platges-2024",
+     "geoportal_id": "82",
+     "name": {
+      "ca": "Ortofoto de platges 2024",
+      "en": "2024 coastal orthophoto",
+      "es": "Ortofoto de playas 2024"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_OrtoPlatges2024_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_OrtoPlatges2024_Especificacions_ca.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_OrtoPlatges2024_Especificacions_ca.pdf"
+     },
+     "legends": {
+      "ca": "",
+      "en": "",
+      "es": ""
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_OrtoPlatges_2024_disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/ortofoto_platges_5cm_hibrid_2024_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/ortofoto_platges_5cm_index_2024/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "81-ortofoto-de-platges-2023",
+     "geoportal_id": "81",
+     "name": {
+      "ca": "Ortofoto de platges 2023",
+      "en": "2023 coastal orthophoto",
+      "es": "Ortofoto de playas 2023"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_OrtoPlatges2023_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_OrtoPlatges2023_Especificacions_ca.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_OrtoPlatges2023_Especificacions_ca.pdf"
+     },
+     "legends": {
+      "ca": "",
+      "en": "",
+      "es": ""
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_OrtoPlatges_2023_disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/ortofoto_platges_hibrid_2023_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/ortofoto_platges_5cm_index_2023/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "80-ortofoto-de-platges-2022",
+     "geoportal_id": "80",
+     "name": {
+      "ca": "Ortofoto de platges 2022",
+      "en": "2022 coastal orthophoto",
+      "es": "Ortofoto de playas 2022"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_OrtoPlatges2022_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_OrtoPlatges2022_Especificacions_ca.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_OrtoPlatges2022_Especificacions_ca.pdf"
+     },
+     "legends": {
+      "ca": "",
+      "en": "",
+      "es": ""
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_OrtoPlatges_2022_disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/ortofoto_platges_hibrid_2022_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/ortofoto_platges_5cm_index_2022/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "42-ortofoto-de-platges-2017-hivern",
+     "geoportal_id": "42",
+     "name": {
+      "ca": "Ortofoto de platges 2017 hivern",
+      "en": "Winter 2017 coastal orthophoto",
+      "es": "Ortofoto de playas 2017 invierno"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_OrtoPlatges2017Hivern_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_OrtoPlatges2017Hivern_Especificacions_ca.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_OrtoPlatges2017Hivern_Especificacions_ca.pdf"
+     },
+     "legends": {
+      "ca": "",
+      "en": "",
+      "es": ""
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_OrtoPlatges_2017Hivern_Disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/ortofoto_platges_hibrid_201712_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/ortofoto_platges_8cm_index_201712/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "41-ortofoto-de-platges-2017-estiu",
+     "geoportal_id": "41",
+     "name": {
+      "ca": "Ortofoto de platges 2017 estiu",
+      "en": "Summer 2017 coastal orthophoto",
+      "es": "Ortofoto de playas 2017 verano"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_OrtoPlatges2017Estiu_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_OrtoPlatges2017Estiu_Especificacions_ca.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_OrtoPlatges2017Estiu_Especificacions_ca.pdf"
+     },
+     "legends": {
+      "ca": "",
+      "en": "",
+      "es": ""
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_OrtoPlatges_2017Estiu_Disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/ortofoto_platges_hibrid_201708_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/ortofoto_platges_15cm_index_201708/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "26-ortofoto-de-platges-2016",
+     "geoportal_id": "26",
+     "name": {
+      "ca": "Ortofoto de platges 2016",
+      "en": "2016 coastal orthophoto",
+      "es": "Ortofoto de playas 2016"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_OrtoPlatges2016_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_OrtoPlatges2016_Especificacions_en.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_OrtoPlatges2016_Especificacions_es.pdf"
+     },
+     "legends": {
+      "ca": "",
+      "en": "",
+      "es": ""
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_OrtoPlatges_2016_Disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/AMB_OrtoPlatges_2016_1M_Hibrid_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/ortofoto_platges_10cm_index_2016/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "23-ortofoto-de-platges-2015",
+     "geoportal_id": "23",
+     "name": {
+      "ca": "Ortofoto de platges 2015",
+      "en": "2015 coastal orthophoto",
+      "es": "Ortofoto de playas 2015"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_OrtoPlatges2015_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_OrtoPlatges2015_Especificacions_en.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_OrtoPlatges2015_Especificacions_es.pdf"
+     },
+     "legends": {
+      "ca": "",
+      "en": "",
+      "es": ""
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_OrtoPlatges_2015_Disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/AMB_OrtoPlatges_2015_1M_Hibrid_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/ortofoto_platges_10cm_index_2015/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "22-ortofoto-de-platges-2013",
+     "geoportal_id": "22",
+     "name": {
+      "ca": "Ortofoto de platges 2013",
+      "en": "2013 coastal orthophoto",
+      "es": "Ortofoto de playas 2013"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_OrtoPlatges2013_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_OrtoPlatges2013_Especificacions_en.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_OrtoPlatges2013_Especificacions_es.pdf"
+     },
+     "legends": {
+      "ca": "",
+      "en": "",
+      "es": ""
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_OrtoPlatges_2013_Disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/AMB_OrtoPlatges_2013_1M_Hibrid_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/ortofoto_platges_10cm_index_2013/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "21-ortofoto-de-platges-2012",
+     "geoportal_id": "21",
+     "name": {
+      "ca": "Ortofoto de platges 2012",
+      "en": "2012 coastal orthophoto",
+      "es": "Ortofoto de playas 2012"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_OrtoPlatges2012_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_OrtoPlatges2012_Especificacions_en.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_OrtoPlatges2012_Especificacions_es.pdf"
+     },
+     "legends": {
+      "ca": "",
+      "en": "",
+      "es": ""
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_OrtoPlatges_2012_Disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/AMB_OrtoPlatges_2012_1M_Hibrid_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/ortofoto_platges_8cm_index_2012/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "Lidar-dades-lidar",
+   "name": {
+    "ca": "Dades LiDAR",
+    "en": "LiDAR Data",
+    "es": "Datos LiDAR"
+   },
+   "products": [
+    {
+     "id": "58-dades-lidar-2022",
+     "geoportal_id": "58",
+     "name": {
+      "ca": "Dades LiDAR 2022",
+      "en": "2022 LiDAR data",
+      "es": "Datos LiDAR 2022"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_LiDAR2022_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_LiDAR2022_Especificacions_ca.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_LiDAR2022_Especificacions_ca.pdf"
+     },
+     "legends": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_LIDAR2022_Llegenda_cat.jpg",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_LIDAR2022_Llegenda_en.jpg",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_LIDAR2022_Llegenda_es.jpg"
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_Lidar2022_disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/lidar_hibrid_2022_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/lidar_index_2022/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "54-dades-lidar-2012-2013",
+     "geoportal_id": "54",
+     "name": {
+      "ca": "Dades LiDAR 2012-2013",
+      "en": "2012-2013 LiDAR data",
+      "es": "Datos LiDAR 2012-2013"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Lidar2012_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Lidar2012_Especificacions_ca.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Lidar2012_Especificacions_ca.pdf"
+     },
+     "legends": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_LIDAR2012_Llegenda_cat.jpg",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_LIDAR2012_Llegenda_en.jpg",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_LIDAR2012_Llegenda_es.jpg"
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_Lidar2012_disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/lidar_hibrid_2012_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/lidar_index_2012/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "53-dades-lidar-de-platges-2017",
+     "geoportal_id": "53",
+     "name": {
+      "ca": "Dades LiDAR de platges 2017",
+      "en": "2017 coastal LiDAR data",
+      "es": "Datos LiDAR de playas 2017"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Lidar_platges2017_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Lidar_platges2017_Especificacions_ca.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Lidar_platges2017_Especificacions_ca.pdf"
+     },
+     "legends": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_LIDAR_PLATGES2017_Llegenda_cat.jpg",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_LIDAR_PLATGES2017_Llegenda_en.jpg",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_LIDAR_PLATGES2017_Llegenda_es.jpg"
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_Lidar_platges2017_disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/lidar_platges_hibrid_2017_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/lidar_platges_index_2017/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "ModelsDigitals-models-digitals",
+   "name": {
+    "ca": "Models digitals",
+    "en": "Digital models",
+    "es": "Modelos digitales"
+   },
+   "products": [
+    {
+     "id": "31-elevacions",
+     "geoportal_id": "31",
+     "name": {
+      "ca": "Elevacions",
+      "en": "Elevation",
+      "es": "Elevaciones"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_MDElevacions_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_MDElevacions_Especificacions_en.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_MDElevacions_Especificacions_es.pdf"
+     },
+     "legends": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_MODEL_ELEVACIONS_Llegenda_ca.jpg",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_MODEL_ELEVACIONS_Llegenda_en.jpg",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_MODEL_ELEVACIONS_Llegenda_es.jpg"
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_model_elevacions_50cm_Disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/model_elevacions_50cm_hibrid_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/model_elevacions_50cm_index/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "32-ombres",
+     "geoportal_id": "32",
+     "name": {
+      "ca": "Ombres",
+      "en": "Hillshade",
+      "es": "Sombras"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_MDOmbres_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_MDOmbres_Especificacions_en.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_MDOmbres_Especificacions_es.pdf"
+     },
+     "legends": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_MODEL_OMBRES_Llegenda_ca.jpg",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_MODEL_OMBRES_Llegenda_en.jpg",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_MODEL_OMBRES_Llegenda_es.jpg"
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_model_ombres_50cm_Disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/model_ombres_50cm_hibrid_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/model_ombres_50cm_index/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "33-orientacions",
+     "geoportal_id": "33",
+     "name": {
+      "ca": "Orientacions",
+      "en": "Aspect",
+      "es": "Orientaciones"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_MDOrientacions_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_MDOrientacions_Especificacions_en.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_MDOrientacions_Especificacions_es.pdf"
+     },
+     "legends": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_MODEL_ORIENTACIONS_Llegenda_ca.jpg",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_MODEL_ORIENTACIONS_Llegenda_en.jpg",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_MODEL_ORIENTACIONS_Llegenda_es.jpg"
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_model_orientacions_50cm_Disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/model_orientacions_50cm_hibrid_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/model_orientacions_50cm_index/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "34-pendents",
+     "geoportal_id": "34",
+     "name": {
+      "ca": "Pendents",
+      "en": "Gradient",
+      "es": "Pendientes"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_MDPendents_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_MDPendents_Especificacions_en.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_MDPendents_Especificacions_es.pdf"
+     },
+     "legends": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_MODEL_PENDENTS_Llegenda_ca.jpg",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_MODEL_PENDENTS_Llegenda_en.jpg",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_MODEL_PENDENTS_Llegenda_es.jpg"
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_model_pendents_50cm_Disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/model_pendents_50cm_hibrid_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/model_pendents_50cm_index/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "35-pendents-majors-del-20",
+     "geoportal_id": "35",
+     "name": {
+      "ca": "Pendents majors del 20%",
+      "en": "Gradients greater than 20%",
+      "es": "Pendientes mayores del 20%"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_MDPendents20_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_MDPendents20_Especificacions_en.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_MDPendents20_Especificacions_es.pdf"
+     },
+     "legends": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_MODEL_PENDENTS20_Llegenda_ca.jpg",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_MODEL_PENDENTS20_Llegenda_en.jpg",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_MODEL_PENDENTS20_Llegenda_es.jpg"
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_model_pendents20_50cm_Disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/model_pendents20_50cm_hibrid_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/model_pendents20_50cm_index/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "Models3D-models-3d-del-territori",
+   "name": {
+    "ca": "Models 3D del territori",
+    "en": "Territorial 3D models",
+    "es": "Modelos 3D del territorio"
+   },
+   "products": [
+    {
+     "id": "57-model-bim-del-territori-beta",
+     "geoportal_id": "57",
+     "name": {
+      "ca": "Model BIM del territori (Beta)",
+      "en": "Territorial BIM model (Beta)",
+      "es": "Modelo BIM del territorio (Beta)"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_3DTerritoriBIM_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_3DTerritoriBIM_Especificacions_en.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_3DTerritoriBIM_Especificacions_ca.pdf"
+     },
+     "legends": {
+      "ca": "",
+      "en": "",
+      "es": ""
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/Territori_3d_bim_disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/model_3d_bim_hibrid_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/model_3d_bim_index/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "55-model-3d-del-territori",
+     "geoportal_id": "55",
+     "name": {
+      "ca": "Model 3D del territori",
+      "en": "Territorial 3D model",
+      "es": "Modelo 3D del territorio"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Territori3D_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Territori3D_Especificacions_ca.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Territori3D_Especificacions_ca.pdf"
+     },
+     "legends": {
+      "ca": "",
+      "en": "",
+      "es": ""
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/Territori_3d_disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/model_3d_territori_hibrid_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/model_3d_territori_index/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "56-model-3d-realista-del-territori",
+     "geoportal_id": "56",
+     "name": {
+      "ca": "Model 3D realista del territori",
+      "en": "Territorial realistic 3D model",
+      "es": "Modelo 3D realista del territorio"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Territori3DRealista_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Territori3DRealista_Especificacions_ca.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Territori3DRealista_Especificacions_ca.pdf"
+     },
+     "legends": {
+      "ca": "",
+      "en": "",
+      "es": ""
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/Territori_3dRealista_disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/model_3d_realista_territori_hibrid_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/model_3d_realista_territori_index/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "ModelsDigitalsHistorics-models-digitals-historics",
+   "name": {
+    "ca": "Models digitals històrics",
+    "en": "Historic digital models",
+    "es": "Modelos digitales históricos"
+   },
+   "products": [
+    {
+     "id": "48-elevacions-1977",
+     "geoportal_id": "48",
+     "name": {
+      "ca": "Elevacions 1977",
+      "en": "1977 Elevation",
+      "es": "Elevaciones 1977"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_MDElevacions1977_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_MDElevacions1977_Especificacions_ca.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_MDElevacions1977_Especificacions_ca.pdf"
+     },
+     "legends": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_MODEL_ELEVACIONS_1977_Llegenda_ca.jpg",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_MODEL_ELEVACIONS_1977_Llegenda_en.jpg",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_MODEL_ELEVACIONS_1977_Llegenda_es.jpg"
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_Model_Elevacions_1977_5m_Disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/elevacions_5m_hibrid_1977_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/model_elevacions_5m_index_1977/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "VolsHistorics-vols-historics",
+   "name": {
+    "ca": "Vols històrics",
+    "en": "Historic flights",
+    "es": "Vuelos históricos"
+   },
+   "products": [
+    {
+     "id": "10-vol-1956",
+     "geoportal_id": "10",
+     "name": {
+      "ca": "Vol 1956",
+      "en": "1956 flight",
+      "es": "Vuelo 1956"
+     },
+     "attribution": "",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1956_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1956_Especificacions_en.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1956_Especificacions_es.pdf"
+     },
+     "legends": {
+      "ca": "",
+      "en": "",
+      "es": ""
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_Vol1956_Disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/Vol1956MapaBase_ETRS89/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/vol_fotogrametric_index_1956/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "3-vol-1961",
+     "geoportal_id": "3",
+     "name": {
+      "ca": "Vol 1961",
+      "en": "1961 flight",
+      "es": "Vuelo 1961"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1961_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1961_Especificacions_en.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1961_Especificacions_es.pdf"
+     },
+     "legends": {
+      "ca": "",
+      "en": "",
+      "es": ""
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_Vol1961_Disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/Vol1961MapaBase_ETRS89/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/vol_fotogrametric_index_1961/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "11-vol-1965",
+     "geoportal_id": "11",
+     "name": {
+      "ca": "Vol 1965",
+      "en": "1965 flight",
+      "es": "Vuelo 1965"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1965_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1965_Especificacions_en.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1965_Especificacions_es.pdf"
+     },
+     "legends": {
+      "ca": "",
+      "en": "",
+      "es": ""
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_Vol1965_Disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/Vol1965MapaBase_ETRS89/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/vol_fotogrametric_index_1965/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "12-vol-1970",
+     "geoportal_id": "12",
+     "name": {
+      "ca": "Vol 1970",
+      "en": "1970 flight",
+      "es": "Vuelo 1970"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1970_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1970_Especificacions_en.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1970_Especificacions_es.pdf"
+     },
+     "legends": {
+      "ca": "",
+      "en": "",
+      "es": ""
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_Vol1970_Disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/Vol1970MapaBase_ETRS89/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/vol_fotogrametric_index_1970/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "13-vol-1972",
+     "geoportal_id": "13",
+     "name": {
+      "ca": "Vol 1972",
+      "en": "1972 flight",
+      "es": "Vuelo 1972"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1972_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1972_Especificacions_en.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1972_Especificacions_es.pdf"
+     },
+     "legends": {
+      "ca": "",
+      "en": "",
+      "es": ""
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_Vol1972_Disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/Vol1972MapaBase_ETRS89/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/vol_fotogrametric_index_1972/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "14-vol-1974",
+     "geoportal_id": "14",
+     "name": {
+      "ca": "Vol 1974",
+      "en": "1974 flight",
+      "es": "Vuelo 1974"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1974_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1974_Especificacions_en.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1974_Especificacions_es.pdf"
+     },
+     "legends": {
+      "ca": "",
+      "en": "",
+      "es": ""
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_Vol1974_Disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/Vol1974MapaBase_ETRS89/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/vol_fotogrametric_index_1974/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "15-vol-1977",
+     "geoportal_id": "15",
+     "name": {
+      "ca": "Vol 1977",
+      "en": "1977 flight",
+      "es": "Vuelo 1977"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1977_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1977_Especificacions_ca.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1977_Especificacions_ca.pdf"
+     },
+     "legends": {
+      "ca": "",
+      "en": "",
+      "es": ""
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_Vol1977_Disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/vol_fotogrametric_hibrid_1977_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/vol_fotogrametric_index_1977/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "16-vol-1979",
+     "geoportal_id": "16",
+     "name": {
+      "ca": "Vol 1979",
+      "en": "1979 flight",
+      "es": "Vuelo 1979"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1979_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1979_Especificacions_en.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1979_Especificacions_es.pdf"
+     },
+     "legends": {
+      "ca": "",
+      "en": "",
+      "es": ""
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_Vol1979_Disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/vol_fotogrametric_1979_hibrid_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/vol_fotogrametric_index_1979/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "17-vol-1981",
+     "geoportal_id": "17",
+     "name": {
+      "ca": "Vol 1981",
+      "en": "1981 flight",
+      "es": "Vuelo 1981"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1981_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1981_Especificacions_en.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1981_Especificacions_es.pdf"
+     },
+     "legends": {
+      "ca": "",
+      "en": "",
+      "es": ""
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_Vol1981_Disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/Vol1981MapaBase_ETRS89/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/vol_fotogrametric_index_1981/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "44-vol-1982-cerdanyola",
+     "geoportal_id": "44",
+     "name": {
+      "ca": "Vol 1982 Cerdanyola",
+      "en": "Cerdanyola 1982 flight",
+      "es": "Vuelo 1982 Cerdanyola"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1982Cerdanyola_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1982Cerdanyola_Especificacions_ca.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1982Cerdanyola_Especificacions_ca.pdf"
+     },
+     "legends": {
+      "ca": "",
+      "en": "",
+      "es": ""
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_Vol1982Cerdanyola_Disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/vol_fotogrametric_cerdanyola_hibrid_1982_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/vol_fotogrametric_cerdanyola_index_1982/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "27-vol-1983",
+     "geoportal_id": "27",
+     "name": {
+      "ca": "Vol 1983",
+      "en": "1983 flight",
+      "es": "Vuelo 1983"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1983_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1983_Especificacions_en.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1983_Especificacions_es.pdf"
+     },
+     "legends": {
+      "ca": "",
+      "en": "",
+      "es": ""
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_Vol1983_Disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/vol_fotogrametric_1983_hibrid_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/vol_fotogrametric_index_1983/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "45-vol-1985",
+     "geoportal_id": "45",
+     "name": {
+      "ca": "Vol 1985",
+      "en": "1985 flight",
+      "es": "Vuelo 1985"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1985_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1985_Especificacions_ca.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1985_Especificacions_ca.pdf"
+     },
+     "legends": {
+      "ca": "",
+      "en": "",
+      "es": ""
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_Vol1985_Disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/vol_fotogrametric_hibrid_1985_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/vol_fotogrametric_index_1985/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "46-vol-1987-tiana",
+     "geoportal_id": "46",
+     "name": {
+      "ca": "Vol 1987 Tiana",
+      "en": "Tiana 1987 flight",
+      "es": "Vuelo 1987 Tiana"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1987Tiana_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1987Tiana_Especificacions_ca.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1987Tiana_Especificacions_ca.pdf"
+     },
+     "legends": {
+      "ca": "",
+      "en": "",
+      "es": ""
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_Vol1987Tiana_Disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/vol_fotogrametric_tiana_hibrid_1987_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/vol_fotogrametric_tiana_index_1987/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "28-vol-1989-90a",
+     "geoportal_id": "28",
+     "name": {
+      "ca": "Vol 1989-90A",
+      "en": "1989-90A flight",
+      "es": "Vuelo 1989-90A"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1989A_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1989A_Especificacions_en.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1989A_Especificacions_es.pdf"
+     },
+     "legends": {
+      "ca": "",
+      "en": "",
+      "es": ""
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_Vol1989A_Disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/vol_fotogrametric_1989A_hibrid_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/vol_fotogrametric_index_1989/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "29-vol-1990",
+     "geoportal_id": "29",
+     "name": {
+      "ca": "Vol 1990",
+      "en": "1990 flight",
+      "es": "Vuelo 1990"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1990_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1990_Especificacions_en.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1990_Especificacions_es.pdf"
+     },
+     "legends": {
+      "ca": "",
+      "en": "",
+      "es": ""
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_Vol1990_Disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/vol_fotogrametric_1990_hibrid_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/vol_fotogrametric_index_1990/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "18-vol-1992",
+     "geoportal_id": "18",
+     "name": {
+      "ca": "Vol 1992",
+      "en": "1992 flight",
+      "es": "Vuelo 1992"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1992_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1992_Especificacions_en.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_Vol1992_Especificacions_es.pdf"
+     },
+     "legends": {
+      "ca": "",
+      "en": "",
+      "es": ""
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_Vol1992_Disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/vol_fotogrametric_1992_hibrid_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/vol_fotogrametric_index_1992/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "Guia_metropolitana-guia-de-carrers-metropolitana",
+   "name": {
+    "ca": "Guia de carrers metropolitana",
+    "en": "Metropolitan street map",
+    "es": "Callejero metropolitano"
+   },
+   "products": [
+    {
+     "id": "7-guia-de-carrers-per-fulls",
+     "geoportal_id": "7",
+     "name": {
+      "ca": "Guia de carrers per fulls",
+      "en": "Street map (sheet cut)",
+      "es": "Callejero por hojas"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_GuiaAMB_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_GuiaAMB_Especificacions_en.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_GuiaAMB_Especificacions_es.pdf"
+     },
+     "legends": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_GAMB_Llegenda_ca.jpg",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_GAMB_Llegenda_en.jpg",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_GAMB_Llegenda_es.jpg"
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_GuiaUrbana_Fulls_Disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/GuiaAMB2014_ETRS89/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/guia_metropolitana_fulls_index_2014/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    },
+    {
+     "id": "8-guia-de-carrers-per-municipis",
+     "geoportal_id": "8",
+     "name": {
+      "ca": "Guia de carrers per municipis",
+      "en": "Street map (township cut)",
+      "es": "Callejero por municipios"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_GuiaAMB_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_GuiaAMB_Especificacions_en.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_GuiaAMB_Especificacions_es.pdf"
+     },
+     "legends": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_GAMB_Llegenda_ca.jpg",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_GAMB_Llegenda_en.jpg",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_GAMB_Llegenda_es.jpg"
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_GuiaUrbana_Municipis_Disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/GuiaAMB2014_ETRS89/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/guia_metropolitana_municipis_index_2014/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "Geodesia-xarxes-geodesiques",
+   "name": {
+    "ca": "Xarxes geodèsiques",
+    "en": "Geodetic networks",
+    "es": "Redes geodésicas"
+   },
+   "products": [
+    {
+     "id": "9-xarxa-geodesica-metropolitana",
+     "geoportal_id": "9",
+     "name": {
+      "ca": "Xarxa geodèsica metropolitana",
+      "en": "Metropolitan geodetic network",
+      "es": "Red geodésica metropolitana"
+     },
+     "attribution": "© AMB, © ICGC",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_XarxaAMB_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_XarxaAMB_Especificacions_en.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_XarxaAMB_Especificacions_es.pdf"
+     },
+     "legends": {
+      "ca": "",
+      "en": "",
+      "es": ""
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_XAMB_Disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/xarxa_geodesica_hibrid_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/xarxa_geodesica_index/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "CartografiaTematica-cartografia-tematica",
+   "name": {
+    "ca": "Cartografia temàtica",
+    "en": "Thematic cartography",
+    "es": "Cartografía temática"
+   },
+   "products": [
+    {
+     "id": "6-mapa-d-usos-del-sol",
+     "geoportal_id": "6",
+     "name": {
+      "ca": "Mapa d'usos del sòl",
+      "en": "Land use cartography",
+      "es": "Mapa de usos del suelo"
+     },
+     "attribution": "© AMB",
+     "specs": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_MapaUsosSol_Especificacions_ca.pdf",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_MapaUsosSol_Especificacions_en.pdf",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Especificacions/AMB_MapaUsosSol_Especificacions_es.pdf"
+     },
+     "legends": {
+      "ca": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_USOS_DEL_SOL_50000_Llegenda_ca.jpg",
+      "en": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_USOS_DEL_SOL_50000_Llegenda_en.jpg",
+      "es": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Llegendes/AMB_USOS_DEL_SOL_50000_Llegenda_es.jpg"
+     },
+     "availability": "https://geoportalcartografia.amb.cat/AppGeoportalCartografia2/DadesAplicacio/Disponibilitat/AMB_MapaUsosSol_Disponibilitat.pdf",
+     "status": "verified",
+     "verified_by": "team",
+     "sources": [
+      {
+       "type": "arcgis",
+       "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/usos_sol_hibrid_25831/MapServer",
+       "label_key": "src_arcgis",
+       "note_key": "note_arcgis"
+      }
+     ],
+     "sheets": {
+      "verified_by": "team",
+      "sources": [
+       {
+        "type": "arcgis",
+        "url": "https://geoportal.amb.cat/geoserveisapp/rest/services/Cartografia/usos_sol_index/MapServer",
+        "label_key": "src_arcgis",
+        "note_key": "note_arcgis"
+       }
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}
